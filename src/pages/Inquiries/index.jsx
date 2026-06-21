@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Row, Col, List, Card, Typography, Tag, Button, Input, Avatar, Spin, Empty, message, Divider } from 'antd';
+import { Row, Col, List, Card, Typography, Tag, Button, Input, Avatar, Spin, Empty, message, Divider, Space } from 'antd';
 import { SendOutlined, UserOutlined, CustomerServiceOutlined } from '@ant-design/icons';
 import { getInquiries, getInquiryById, replyInquiry } from '../../api';
 import { useAuth } from '../../context/AuthContext';
@@ -44,7 +44,7 @@ export default function Inquiries() {
 
   return (
     <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
-      <Title level={2}>{isAdmin ? '?? All Inquiries' : '?? My Inquiries'}</Title>
+      <Title level={2}>{isAdmin ? '📋 All Inquiries' : '💬 My Inquiries'}</Title>
       {loading ? <div style={{ textAlign: 'center', padding: 60 }}><Spin size="large" /></div> : (
         <Row gutter={24} style={{ height: 'calc(100vh - 200px)' }}>
           <Col xs={24} md={8} style={{ overflowY: 'auto', maxHeight: '100%' }}>

@@ -1,4 +1,39 @@
-# Logs
+# .gitignore for RealEstatePortal/frontend
+# Targets Node.js, React, Vite, and common editors
+
+# ============================================================
+# DEPENDENCIES — NEVER COMMIT
+# ============================================================
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ============================================================
+# BUILD OUTPUT — NEVER COMMIT
+# ============================================================
+dist/
+dist-ssr/
+build/
+out/
+
+# ============================================================
+# TEST COVERAGE — NEVER COMMIT
+# ============================================================
+coverage/
+*.lcov
+
+# ============================================================
+# ENVIRONMENT & SECRETS — NEVER COMMIT
+# ============================================================
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ============================================================
+# LOGS
+# ============================================================
 logs
 *.log
 npm-debug.log*
@@ -7,18 +42,38 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# ============================================================
+# RUNTIME & CACHE
+# ============================================================
 *.local
+*.cache
+.cache/
+.parcel-cache/
+.vite/
 
-# Editor directories and files
+# ============================================================
+# EDITOR DIRECTORIES AND FILES
+# ============================================================
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# VISUAL STUDIO
+# ============================================================
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.user
+
+# ============================================================
+# COMPILED FILES
+# ============================================================
+*.pdb
+*.tmp
+*.temp
