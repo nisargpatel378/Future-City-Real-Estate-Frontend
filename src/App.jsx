@@ -31,6 +31,9 @@ import AdminUsers from './pages/Admin/Users';
 import AdminInquiries from './pages/Admin/Inquiries';
 import AdminContactMessages from './pages/Admin/ContactMessages';
 
+// Gemini AI Modal
+import GeminiModal from './components/common/GeminiModal';
+
 const { Content, Footer } = Layout;
 
 function MainLayout() {
@@ -63,6 +66,7 @@ function MainLayout() {
           } />
         </Routes>
       </Content>
+      <GeminiModal />
       <Footer style={{ textAlign: 'center', background: '#001529', color: 'rgba(255, 255, 255, 0.65)', padding: '24px 50px' }}>
         🏠 Future City Real Estate Rebuild ©2026 Created for Ahmedabad Property Portal
       </Footer>
